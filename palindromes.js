@@ -1,4 +1,5 @@
 function palindromes(string) {
+    string=string.toLowerCase(); 
     string=string.replace(/[^a-zA-Z]/g,""); //remove anything that is not alphabetical
     var newString = ''; // create a new string - this will hold the reversed string
 
@@ -6,7 +7,7 @@ function palindromes(string) {
         newString +=string[i]; // append the char @ index to the newString
     }
 
-if (string.toLowerCase()===newString.toLowerCase()) { // check to see if they are equal
+if (string===newString) { // check to see if they are equal
     return`PALINDROME`; // if yes then you will return palindrome
 } else {
     return `NOPE`; // if not then - 'nope
